@@ -1,5 +1,5 @@
 (ns com.mefesto.wabbitmq.content-type
-  (:use [clojure.contrib.json :only (json-str read-json)]))
+  (:use [clojure.data.json :only (json-str read-json)]))
 
 (defn- charset [type]
   (second (re-find #"charset=([^;]+)" type)))

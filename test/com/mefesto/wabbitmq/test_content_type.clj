@@ -1,5 +1,5 @@
 (ns com.mefesto.wabbitmq.test-content-type
-  (:use [clojure.contrib.json :only (json-str)]
+  (:use [clojure.data.json :only (json-str)]
         [clojure.test]
         [com.mefesto.wabbitmq.content-type])
   (:import [java.util Arrays]))
