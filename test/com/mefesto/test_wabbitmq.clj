@@ -5,7 +5,7 @@
   (:import [com.rabbitmq.client QueueingConsumer QueueingConsumer$Delivery]
            [java.io IOException]))
 
-(def *consumer* nil)
+(def ^{:dynamic true} *consumer* nil)
 
 (defn pop-msg []
   (:body (first (consuming-seq true 1))))
