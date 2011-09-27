@@ -35,7 +35,7 @@
       (.setRequestedFrameMax (:requested-frame-max cfg))
       (.setRequestedHeartbeat (:requested-heartbeat cfg)))))
 
-(defn- make-connection [{addrs :addresses :as config}]
+(defn make-connection [{addrs :addresses :as config}]
   (let [factory (connection-factory config)]
     (if addrs
       (.newConnection factory (into-array Address addrs))
